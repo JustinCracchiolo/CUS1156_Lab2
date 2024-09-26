@@ -26,6 +26,7 @@ public class UniqueWords
     			  break;
     		  }
     	  }
+    	  //increment count when unique word is found
     	  if(isUnique) {
     		  count++;
     	  }
