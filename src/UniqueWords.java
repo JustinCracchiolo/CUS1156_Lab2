@@ -1,3 +1,10 @@
+/* Project: Lab 2: Git
+* Class: UniqueWords.java
+* Author: Justin Cracchiolo
+* Date: September 30th, 2014
+* This program lists the number of unique
+* words in a list.
+*/
 import java.util.ArrayList;
 
 public class UniqueWords
@@ -10,12 +17,18 @@ public class UniqueWords
    public static int countUnique(ArrayList<String> list)
    {
 	  int count = 0;
-	  
-      for (int i = 0; i < list.size(); i++)
-      {		 for (int j = 0; j < list.size(); j++)
-		 {
-			
-		 }
+	  boolean isUnique = true;
+      for (int i = 0; i < list.size(); i++){
+    	  isUnique = true;
+    	  for (int j = 0; j < list.size(); j++){
+    		  if(list.get(i).equals(list.get(j)) && j != i) {
+    			  isUnique = false;
+    			  break;
+    		  }
+    	  }
+    	  if(isUnique) {
+    		  count++;
+    	  }
       }
 	  return count;
    }
