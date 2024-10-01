@@ -18,12 +18,15 @@ public class UniqueWords
    {
 	  int count = 0;
 	  boolean isUnique = true;
+	  //assume that every word is unique to start
       for (int i = 0; i < list.size(); i++){
     	  isUnique = true;
     	  for (int j = 0; j < list.size(); j++){
     		  if(list.get(i).equals(list.get(j)) && j != i) {
     			  isUnique = false;
     			  break;
+    			  //once a word appears twice,
+    			  //no need to keep going
     		  }
     	  }
     	  //increment count when unique word is found
